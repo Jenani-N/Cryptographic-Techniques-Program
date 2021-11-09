@@ -26,38 +26,12 @@ string caesarCipherDecryption(string message) {
     for (int i = 0; i < message.length(); i++) {
         char charac = message[i];
         int k = 7;
-
-        if (!isspace(charac)) { //checking for white space
-
-            switch (charac) {
-                case '0':
-                    decryption += "t";
-                    break;
-                case '1':
-                    decryption += "u";
-                    break;
-                case '2':
-                    decryption += "v";
-                    break;
-                case '3':
-                    decryption += "w";
-                    break;
-                case '4':
-                    decryption += "x";
-                    break;
-                case '5':
-                    decryption += "y";
-                    break;
-                case '6':
-                    decryption += "z";
-                    break;
-                default:
-                    decryption += (int(charac) - '0' + 75) % 75 - k + '0';
-                    break;
-           }
+        char formula = (int(charac) - '0' - k) % 75;
+        if (int(charac) >= '0' && int(charac) <= ('0' + k - 1)) {
+            decryption += formula + 75 + '0';
         }
         else {
-            decryption += "  ";
+            decryption += formula + '0';
         }
     }
     return decryption;
