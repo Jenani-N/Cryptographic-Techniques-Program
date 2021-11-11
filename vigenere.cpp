@@ -41,15 +41,3 @@ string vigenereCipherDecryption(string message) {
     }
     return decryption;
 }
-
-//int main() {
-//
-//    string str;
-//    cout << "Enter message: ";
-//    getline(cin, str);
-//    cout << vigenereCipherEncryption(str) << endl;
-//    cout << "Enter message for decryption: ";
-//    getline(cin, str);
-//    cout << vigenereCipherDecryption(str);
-//
-//}
