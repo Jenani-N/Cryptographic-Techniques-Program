@@ -27,11 +27,16 @@ string caesarCipherDecryption(string message) {
         char charac = message[i];
         int k = 7;
         char formula = (int(charac) - '0' - k) % 75;
-        if (int(charac) >= '0' && int(charac) <= ('0' + k - 1)) {
-            decryption += formula + 75 + '0';
+        if (!isspace(charac)) { //checking for white space
+            if (int(charac) >= '0' && int(charac) <= ('0' + k - 1)) {
+                decryption += formula + 75 + '0';
+            }
+            else {
+                decryption += formula + '0';
+            }
         }
         else {
-            decryption += formula + '0';
+            decryption += "  ";
         }
     }
     return decryption;
