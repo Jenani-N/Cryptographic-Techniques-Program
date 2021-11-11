@@ -36,7 +36,7 @@ string caesarCipherDecryption(string message) {
             }
         }
         else {
-            decryption += "  ";
+            decryption += " ";
         }
     }
     return decryption;
