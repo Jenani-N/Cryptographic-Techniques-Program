@@ -36,7 +36,7 @@ string vigenereCipherDecryption(string message) {
             }
         }
         else {
-            decryption += "  ";
+            decryption += " ";
         }
     }
     return decryption;
